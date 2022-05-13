@@ -24,6 +24,7 @@
 
 :root {
   --accent-color: #b59f5b;
+  --hover-color-btn: #323232;
 }
 
 button {
@@ -176,7 +177,6 @@ button {
 
 .popup-select {
   height: 48px;
-  background-color: #f4f7f6;
   vertical-align: middle;
   padding-left: 14px;
   margin-bottom: 29px;
@@ -184,6 +184,7 @@ button {
   -moz-appearance: none;
   background: url(../svg/form-arrows.svg) no-repeat 95.5% center;
   background-size: 10px;
+  background-color: #f4f7f6;
   border: none;
 }
 
@@ -230,8 +231,8 @@ button {
 .popup-textarea {
   font-family: inherit;
   padding: 15px 20px;
-  min-width: calc(100%-60px);
-  max-width: calc(100%-60px);
+  min-width: 100%;
+  max-width: 100%;
   min-height: 130px;
   max-height: 130px;
   background-color: #f4f7f6;
@@ -253,6 +254,10 @@ button {
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
+}
+
+.btn-popup:hover {
+  background-color: var(--hover-color-btn);
 }
 
 .trends-container {
@@ -338,6 +343,7 @@ button {
 
 .trends-tag {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .trends-item {
@@ -405,6 +411,7 @@ button {
 
 .content-tags {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 8px;
 }
 
@@ -418,6 +425,7 @@ button {
 
 .content-tag-link {
   font-size: 14px;
+  line-height: 1;
   font-weight: bold;
   color: var(--accent-color);
   text-transform: uppercase;
@@ -520,6 +528,7 @@ button {
 
 .search {
   margin-top: 55px;
+  position: relative;
 }
 
 .remouve-row, .remouve-btn {
@@ -534,10 +543,10 @@ button {
 }
 
 .search-row {
-  width: calc(100% - 48px);
+  width: 100%;
   height: 48px;
   background-color: #f4f7f6;
-  padding: 0 15px;
+  padding: 0 63px 0 15px;
   border: none;
 }
 
@@ -552,16 +561,17 @@ button {
 .search-btn {
   width: 48px;
   height: 48px;
-  background-color: var(--accent-color);
-  border: none;
   background: url("../svg/search.svg") no-repeat center center;
   background-size: 20px;
+  background-color: var(--accent-color);
   position: absolute;
+  right: 0;
   cursor: pointer;
+  border: none;
 }
 
 .search-btn:hover {
-  background-color: #323232;
+  background-color: var(--hover-color-btn);
 }
 
 .subscribe {
@@ -581,7 +591,7 @@ button {
 }
 
 .subscribe-email:focus {
-  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .subscribe-btn {
@@ -594,7 +604,7 @@ button {
 }
 
 .subscribe-btn:hover {
-  background-color: #323232;
+  background-color: var(--hover-color-btn);
 }
 
 .subscribe-btn-text {
@@ -626,6 +636,10 @@ button {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
+}
+
+.tag:hover {
+  border: 3px solid #b59f5b;
 }
 
 .tag-link {
@@ -776,7 +790,7 @@ button {
 }
 
 .shop-btn:hover {
-  background-color: #323232;
+  background-color: var(--hover-color-btn);
 }
 
 .footer {
@@ -936,7 +950,6 @@ button {
     flex: auto;
     max-width: 459px;
     margin-right: 35px;
-    margin-bottom: 35px;
   }  
   .content-container {
     flex-wrap: wrap;
@@ -993,6 +1006,7 @@ button {
     font-size: 15px;
   }
   .copyrights {
+    margin-top: 51px;
     margin-bottom: 50px;
   }
 }
@@ -1114,7 +1128,7 @@ button {
   
   .subscribe,
   .tags {
-    margin-top: 40px;
+    margin-top: 38px;
   }
   .categories {
     margin-top: 40px;
